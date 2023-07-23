@@ -2,16 +2,17 @@
 //
 // No hints this time! ;)
 
-// I AM NOT DONE
-
 #[derive(Debug)]
 enum Message {
-    // TODO: define a few types of messages as used below
+    Quit,
+    Echo(String),
+    Move(i32, i32),
+    ChangeColor
 }
 
 fn main() {
     println!("{:?}", Message::Quit);
-    println!("{:?}", Message::Echo);
-    println!("{:?}", Message::Move);
+    println!("{:?}", Message::Echo(String::from("hello world")));
+    println!("{:?}", Message::Move(100, 200));
     println!("{:?}", Message::ChangeColor);
 }
